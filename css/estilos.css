@@ -48,7 +48,7 @@ ul {
 }
 img {
     object-fit: contain;
-    max-width: 100%;
+    max-width: inherit;
 }
 /* contenedores del sitio */
 header {
@@ -214,7 +214,7 @@ footer .tiny {
 .derecha p {
     font-size: 1.2rem;
 }
-.texto h1{ 
+.texto h1 {
     text-align: left;
 }
 @media (max-width: 1200px) {
@@ -325,6 +325,9 @@ footer .tiny {
 .fullref a:hover {
     color: var(--text-color);
 }
+.fullref img{
+    max-width: 100%;
+}
 .numbertitle {
     color: var(--text-color);
 }
@@ -403,16 +406,13 @@ article p {
     font-size: 0.7rem;
     text-align: left;
 }
-.onucaption {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.rectangle {
-    width: 20px;
-    height: 3px;
-    background: var(--contrast-color-2);
+.grayfigure figcaption::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 5px;
     margin-right: 10px;
+    background-color: var(--contrast-color-2);
 }
 
 /* video frame responsive */
@@ -427,24 +427,39 @@ figure.video-fluid {
 }
 
 iframe.video-fluid-item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 90%;
     border: 0;
 }
 
-.video-fluid::before {
-    display: block;
-    content: "";
-    padding-top: 56.25%;
-}
-.video-fluid figcaption{
+.video-fluid figcaption {
     text-align: left;
     color: var(--text-color);
 }
 
 /* iniciativas */
+dl a {
+    color: var(--contrast-color-1);
+}
+dl a:hover {
+    color: var(--text-color);
+}
+dt {
+    color: rgb(93, 95, 121);
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
+dt::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: var(--contrast-color-2);
+}
+dd {
+    margin-left: 25px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
