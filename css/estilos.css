@@ -221,7 +221,7 @@ footer .tiny {
     #introduction {
         flex-direction: column;
     }
-    .izquierda img {
+    .izquierda img{
         object-fit: contain;
         max-width: 100%;
     }
